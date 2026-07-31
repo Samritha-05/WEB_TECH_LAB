@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    margin:20px;
+}
+
+.container{
+    width:1000px;
+    margin:auto;
+    background:white;
+    border:2px solid gray;
+    padding:15px;
+}
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+}
+
+header img{
+    width:90px;
+    height:90px;
+}
+
+header h1{
+    margin-right:180px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:purple;
+    margin-right:40px;
+}
+
+nav input{
+    width:180px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.skills{
+    width:22%;
+}
+
+.skills progress{
+    width:100%;
+}
+
+.video{
+    width:45%;
+    text-align:center;
+}
+
+.forms{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+fieldset{
+    width:48%;
+}
+
+input,select,textarea{
+    width:95%;
+    padding:5px;
+    margin:5px 0;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.bottom iframe{
+    width:48%;
+    height:250px;
+}
+
+footer{
+    margin-top:20px;
+    border-top:1px solid gray;
+    padding-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<img src="C:\Users\91882\Pictures\Saved Pictures\Blazer Photo.jpeg" alt="Profile">
+
+<h1>A SAMRITHA</h1>
+
+</header>
+
+<nav>
+
+<div>
+<a href="#">Academics</a>
+<a href="#">Achievements</a>
+<a href="#">Friends</a>
+</div>
+
+<input type="text" placeholder="Search">
+
+</nav>
+
+<div class="top">
+
+<div class="skills">
+
+<h4>Technology</h4>
+
+Java
+<progress value="85" max="100"></progress>
+
+C
+<progress value="70" max="100"></progress>
+
+C++
+<progress value="75" max="100"></progress>
+
+PHP
+<progress value="60" max="100"></progress>
+
+JavaScript
+<progress value="70" max="100"></progress>
+
+</div>
+
+<div class="video">
+
+<video width="350" controls>
+<source src="C:\Users\91882\Downloads\WhatsApp Video 2026-07-31 at 11.48.27.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+<div class="forms">
+
+<fieldset>
+
+<legend>Personal Information</legend>
+
+<label>User Name</label>
+<input type="text" placeholder="Enter username">
+
+<label>Password</label>
+<input type="password">
+
+<label>Register Number</label>
+<input type="text">
+
+<label>Age</label>
+<input type="number">
+
+<label>Gender</label><br>
+
+<input type="radio" name="gender" style="width:auto;"> Male
+<input type="radio" name="gender" style="width:auto;"> Female
+
+<br><br>
+
+<label>DOB</label>
+<input type="date">
+
+<label>Favourite Color</label>
+<input type="color">
+
+<label>Choose Photo</label>
+<input type="file">
+
+</fieldset>
+
+<fieldset>
+
+<legend>Contact Information</legend>
+
+<label>Address</label>
+<textarea rows="3"></textarea>
+
+<label>State</label>
+
+<select>
+<option>Select</option>
+<option>Tamil Nadu</option>
+<option>Kerala</option>
+<option>Karnataka</option>
+<option>Andhra Pradesh</option>
+</select>
+
+<label>Zipcode</label>
+<input type="text">
+
+<label>Mobile</label>
+<input type="tel">
+
+<label>Email</label>
+<input type="email">
+
+<label>URL</label>
+<input type="url">
+
+<input type="checkbox" style="width:auto;"> Verified
+
+<br><br>
+
+<input type="submit" value="Submit">
+
+</fieldset>
+
+</div>
+
+<div class="bottom">
+
+<iframe src="C:\Users\91882\Downloads\Web Tech 2nd and 3rd exercise 24-07-2026.pdf"></iframe>
+
+<iframe
+src="https://www.google.com/maps?q=Karunya+University&output=embed">
+</iframe>
+
+</div>
+
+<footer>
+
+<p>COIMBATORE</p>
+
+<p>
+© 2024-2028. URK24CS6011 - Web Technology Lab Batch 1.
+All Rights Reserved.
+</p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
