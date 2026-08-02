@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Web Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:1000px;
+            margin:20px auto;
+            border:2px solid #999;
+            background:white;
+        }
+
+        /* Header */
+        .header{
+            display:flex;
+            align-items:center;
+            background:linear-gradient(to right,#9933ff,#7b1fa2);
+            color:white;
+            padding:10px;
+        }
+
+        .header img{
+            width:90px;
+            height:90px;
+            border-radius:5px;
+        }
+
+        .title{
+            flex:1;
+            text-align:center;
+        }
+
+        .title h1{
+            font-size:35px;
+        }
+
+        .social img{
+            width:30px;
+            height:30px;
+            margin-left:5px;
+        }
+
+        /* Menu */
+        .menu{
+            display:flex;
+            justify-content:space-around;
+            background:#d9f2ff;
+            padding:12px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:black;
+            font-weight:bold;
+        }
+
+        .menu a:hover{
+            color:blue;
+        }
+
+        /* About */
+        .about{
+            display:flex;
+        }
+
+        .text{
+            width:40%;
+            padding:20px;
+            background:#d6ecff;
+        }
+
+        .banner{
+            width:60%;
+        }
+
+        .banner img{
+            width:100%;
+            height:250px;
+        }
+
+        /* Skills */
+        .skills{
+            display:flex;
+            justify-content:space-around;
+            padding:20px;
+            background:#eeeeee;
+        }
+
+        .skill{
+            width:180px;
+            text-align:center;
+            background:white;
+            border:1px solid gray;
+            padding:10px;
+        }
+
+        .skill img{
+            width:120px;
+            height:120px;
+        }
+
+        /* Family */
+        .family{
+            display:flex;
+            justify-content:space-around;
+            padding:25px;
+            background:linear-gradient(to right,#0b4f8a,#1f7dbb);
+            color:white;
+        }
+
+        .member{
+            width:30%;
+            text-align:center;
+        }
+
+        .member img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            border:5px solid black;
+        }
+
+        .member h3{
+            color:#ccff66;
+            margin:15px 0;
+        }
+
+        /* Footer */
+        footer{
+            background:#f5deb3;
+            padding:20px;
+            text-align:center;
+            font-style:italic;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+
+        <img src="C:\Users\91882\Pictures\Saved Pictures\Blazer Photo.jpeg">
+
+        <div class="title">
+            <h1>A Samritha</h1>
+        </div>
+
+        <div class="social">
+            <img src="C:\Users\91882\Pictures\facebook.jfif">
+            <img src="C:\Users\91882\Pictures\twitter.jfif">
+            <img src="C:\Users\91882\Pictures\google.jfif">
+        </div>
+
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="#">Personal</a>
+        <a href="#">Academics</a>
+        <a href="#">Activity</a>
+        <a href="#">Others</a>
+    </div>
+
+    <!-- About -->
+    <div class="about">
+
+        <div class="text">
+            <p>
+                I am currently pursuing B.Tech Computer Science and Engineering.
+                I am more passionate about digital security and ready to explore,
+                the future world of technology,
+            </p>
+        </div>
+
+        <div class="banner">
+            <img src="C:\Users\91882\Pictures\3fig.png">
+        </div>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="skills">
+
+        <div class="skill">
+            <img src="C:\Users\91882\Pictures\html5.jfif">
+            <h2>HTML5</h2>
+        </div>
+
+        <div class="skill">
+            <img src="C:\Users\91882\Pictures\css.jfif">
+            <h2>CSS3</h2>
+        </div>
+
+        <div class="skill">
+            <img src="C:\Users\91882\Pictures\javascript.jfif">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="skill">
+            <img src="C:\Users\91882\Pictures\php.jfif">
+            <h2>PHP</h2>
+        </div>
+
+    </div>
+
+    <!-- Family -->
+    <div class="family">
+
+        <div class="member">
+            <img src="C:\Users\91882\Pictures\father.jfif">
+            <h3>Mr.B.Arunkumar</h3>
+            <p>
+                It was my father who taught me to value myself.
+            </p>
+        </div>
+
+        <div class="member">
+            <img src="C:\Users\91882\Pictures\mother.jfif">
+            <h3>Mrs.C.Sasikala</h3>
+            <p>
+                My mother taught me that we all have the power to achieve our dreams.
+            </p>
+        </div>
+
+        <div class="member">
+            <img src="C:\Users\91882\Pictures\sister.png">
+            <h3>Rithu</h3>
+            <p>
+                A sister is both your mirror and your opposite.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>COIMBATORE</p>
+        <p>© 2024-2028. (URK24CS6011) - Web Technology Lab Batch 3. All Rights Reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
