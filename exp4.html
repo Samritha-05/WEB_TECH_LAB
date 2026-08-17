@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB_TECH_PRACTICUM</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        header {
+            height: 170px;
+            background-color: #2864a5;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid gray;
+        }
+
+        header img {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .img1 {
+            left: 20px;
+            top: 10px;
+        }
+
+        .img2 {
+            left: 40px;
+            top: 45px;
+        }
+
+        .img3 {
+            left: 70px;
+            top: 80px;
+        }
+
+        nav {
+            height: 28px;
+            display: flex;
+            background-color: #999999;
+        }
+
+        nav a {
+            width: 130px;
+            text-align: center;
+            padding: 7px;
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+        }
+
+        nav a:first-child {
+            background-color: red;
+            color: black;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            height: 140px;
+            background-color: #f5b6c4;
+            position: relative;
+        }
+        .favorites {
+            position: absolute;
+            left: 120px;
+            top: 5px;
+            width: 155px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .favorites-title {
+            background-color: #009900;
+            color: black;
+            text-align: center;
+            padding: 7px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .favorite-item {
+            height: 30px;
+            padding: 5px 10px;
+            background-color: #8cff00;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .favorite-item:nth-child(even) {
+            background-color: #009900;
+        }
+
+        .favorite-item img {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+        }
+        .login-section {
+         height: 270px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        }
+
+        .form-box {
+            background-color: white;
+            width: 175px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px gray;
+        }
+
+        .form-box h3 {
+            text-align: center;
+            margin: 0 0 12px;
+            font-size: 14px;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 8px;
+            border: none;
+            background-color: #ddd;
+            font-size: 9px;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            background-color: #0878ed;
+            color: white;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        .form-box button:hover {
+            background-color: #005fc7;
+        }
+
+        footer {
+            height: 75px;
+            background-color: #ffe1ad;
+            padding: 15px;
+            font-size: 13px;
+            font-style: italic;
+            border: 1px solid #ddd;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="C:\Users\91882\Pictures\Camera Roll\flower.webp" class="img1">
+        <img src="C:\Users\91882\Pictures\FLOWER02.webp" class="img2">
+        <img src="C:\Users\91882\Pictures\Camera Roll\apple.webp" class="img3">
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Scroll</a>
+        <a href="#">Others</a>
+    </nav>
+
+    <div class="content">
+
+        <div class="favorites">
+
+            <div class="favorites-title">
+                Favorites
+            </div>
+
+            <div class="favorite-item">
+                <span>Apple</span>
+                <img src="C:\Users\91882\Pictures\Camera Roll\apple.webp">
+            </div>
+
+            <div class="favorite-item">
+                <span>Orange</span>
+                <img src="C:\Users\91882\Pictures\Camera Roll\orange.webp">
+            </div>
+
+            <div class="favorite-item">
+                <span>Banana</span>
+                <img src="C:\Users\91882\Pictures\Camera Roll\banana.webp">
+            </div>
+
+            <div class="favorite-item">
+                <span>Grapes</span>
+                <img src="C:\Users\91882\Pictures\Camera Roll\grapes.webp">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="login-section">
+
+        <div class="form-box">
+            <h3>Sign In</h3>
+
+            <input type="text" placeholder="Enter Username / Email / Phone Number">
+
+            <input type="password" placeholder="Enter Password">
+
+            <button>Sign In</button>
+        </div>
+
+    
+        <div class="form-box">
+            <h3>Sign Up</h3>
+
+            <input type="text" placeholder="Enter Name">
+
+            <input type="email" placeholder="Enter Email">
+
+            <input type="password" placeholder="Enter Password">
+
+            <button>Sign Up</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>COIMBATORE</p>
+        <p>© 2024-2028. (URK24CS6011) - Web Technology Lab Batch 3. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
