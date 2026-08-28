@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moving Car</title>
+</head>
+
+<body>
+
+<h1>Moving Car</h1>
+
+<img id="car"
+     src=c:\Users\91882\Downloads\car\car.jpg
+     width="200">
+
+<br><br>
+
+<button onclick="startCar()">START</button>
+<button onclick="stopCar()">STOP</button>
+
+<script>
+
+var car = document.getElementById("car");
+var position = 0;
+var movement;
+
+car.style.position = "relative";
+car.style.left = "0px";
+
+function startCar() {
+    position = position + 5;
+    car.style.left = position + "px";
+
+    movement = setTimeout(startCar, 50);
+}
+
+function stopCar() {
+    clearTimeout(movement);
+}
+
+</script>
+
+</body>
+</html>

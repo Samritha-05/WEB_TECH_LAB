@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+</head>
+
+<body>
+
+<h1>Mouse Events</h1>
+
+<p id="para1">
+    Move your mouse to increase the font size.
+</p>
+
+<script>
+function incSize() {
+    document.getElementById("para1").style.fontSize = "28px";
+}
+
+function decSize() {
+    document.getElementById("para1").style.fontSize = "16px";
+}
+
+var para = document.getElementById("para1");
+
+para.onmouseover = incSize;
+para.onmouseout = decSize;
+</script>
+
+</body>
+</html>

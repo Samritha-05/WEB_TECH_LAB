@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+
+<body>
+
+<h1>Student Details</h1>
+
+<div id="output"></div>
+
+<script>
+
+var student = [
+    {
+        name: "John",
+        regno: "123",
+        dob: "20-apr-1995"
+    },
+    {
+        name: "Joseph",
+        regno: "456",
+        dob: "05-jan-1998"
+    },
+    {
+        name: "Sam",
+        regno: "789",
+        dob: "10-jun-2002"
+    }
+];
+
+var output = "";
+
+for (var i = 0; i < student.length; i++) {
+
+    output += "<p>";
+
+    output += student[i].name +
+              "'s Register Number is " +
+              student[i].regno + ".<br>";
+
+    var year = new Date(student[i].dob).getFullYear();
+
+    if (year < 2000) {
+        output += "Born before 2000";
+    }
+    else {
+        output += "Born after 2000";
+    }
+
+    output += "</p>";
+}
+
+document.getElementById("output").innerHTML = output;
+
+</script>
+
+</body>
+</html>
