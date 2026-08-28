@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Cake Order</title>
+</head>
+<body>
+
+<h1>Pizza Order Form</h1>
+
+<fieldset>
+
+# of 1/2kg Cakes:
+<input type="text" id="small">
+<br><br>
+
+# of 1kg Cakes:
+<input type="text" id="medium">
+<br><br>
+
+# of 2kg Cakes:
+<input type="text" id="large">
+<br><br>
+
+Tip:
+
+<label>
+<input type="radio" value="10" name="tip">
+10%
+</label>
+
+<label>
+<input type="radio" value="15" name="tip">
+15%
+</label>
+
+<label>
+<input type="radio" value="20" name="tip">
+20%
+</label>
+
+<br><br>
+
+<button id="submit">Calculate Order</button>
+
+</fieldset>
+
+<p>
+Cost of order:
+<span id="price"></span>
+</p>
+
+<script>
+
+document.getElementById("submit").addEventListener(
+    "click",
+    calculateOrder
+);
+
+function calculateOrder() {
+
+    var small = parseInt(
+        document.getElementById("small").value
+    );
+
+    var medium = parseInt(
+        document.getElementById("medium").value
+    );
+
+    var large = parseInt(
+        document.getElementById("large").value
+    );
+
+    var tip = document.querySelector(
+        'input[name="tip"]:checked'
+    ).value;
+
+    tip = parseInt(tip);
+    var cost =
+        (small * 100) +
+        (medium * 200) +
+        (large * 400);
+
+    var tax = cost * tip / 100;
+    var total = cost + tax;
+
+    document.getElementById("price").innerHTML =
+        total;
+}
+
+</script>
+
+</body>
+</html>
