@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Budget Calculator</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f9fc;
+        }
+
+        .container {
+            width: 450px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 18px;
+            background: #f1f7fb;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #123b78;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin: 3px 0 0;
+            color: #7d8da3;
+            font-size: 14px;
+        }
+
+        .form {
+            padding: 10px 25px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .row label {
+            width: 125px;
+            color: #142b57;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .row input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #d5dce5;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 210px;
+            margin: 12px auto;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background: #1769ed;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0d55c9;
+        }
+
+        .line {
+            border-top: 1px solid #ccc;
+            margin: 5px 10px 10px;
+        }
+
+        .results {
+            display: flex;
+            gap: 7px;
+            padding: 0 10px 10px;
+        }
+
+        .result {
+            flex: 1;
+            text-align: center;
+            padding: 12px 5px;
+            border-radius: 7px;
+        }
+
+        .result h3 {
+            margin: 0 0 5px;
+            font-size: 12px;
+        }
+
+        .result p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .saving {
+            background: #e1f7f0;
+            color: #087d68;
+        }
+
+        .accessories {
+            background: #fff3df;
+            color: #e68a00;
+        }
+
+        .emergency {
+            background: #ffe6e8;
+            color: #d72d4a;
+        }
+
+        .remaining {
+            background: #e1f1ff;
+            color: #0864bd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1> My Budget Calculator</h1>
+            <p>Plan smarter. Spend brighter.</p>
+        </div>
+
+        <div class="form">
+
+            <div class="row">
+                <label>Total Amount (₹)</label>
+                <input type="number" id="total" value="1000">
+            </div>
+
+            <div class="row">
+                <label>Saving %</label>
+                <input type="number" id="saving" value="20">
+            </div>
+
+            <div class="row">
+                <label>Accessories %</label>
+                <input type="number" id="accessories" value="30">
+            </div>
+
+            <div class="row">
+                <label>Emergency %</label>
+                <input type="number" id="emergency" value="10">
+            </div>
+
+            <button onclick="calculateBudget()">
+                Evaluate My Money
+            </button>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="results">
+
+            <div class="result saving">
+                <h3> Saving</h3>
+                <p>₹<span id="savingResult">200.00</span></p>
+            </div>
+
+            <div class="result accessories">
+                <h3> Accessories</h3>
+                <p>₹<span id="accessoriesResult">300.00</span></p>
+            </div>
+
+            <div class="result emergency">
+                <h3> Emergency</h3>
+                <p>₹<span id="emergencyResult">100.00</span></p>
+            </div>
+
+            <div class="result remaining">
+                <h3> Remaining</h3>
+                <p>₹<span id="remainingResult">400.00</span></p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function calculateBudget() {
+
+            let total = parseFloat(document.getElementById("total").value);
+            let savingPercent = parseFloat(document.getElementById("saving").value);
+            let accessoriesPercent = parseFloat(document.getElementById("accessories").value);
+            let emergencyPercent = parseFloat(document.getElementById("emergency").value);
+
+            let savingAmount = total * savingPercent / 100;
+            let accessoriesAmount = total * accessoriesPercent / 100;
+            let emergencyAmount = total * emergencyPercent / 100;
+
+            let remainingAmount =
+                total - savingAmount - accessoriesAmount - emergencyAmount;
+
+            document.getElementById("savingResult").innerHTML =
+                savingAmount.toFixed(2);
+
+            document.getElementById("accessoriesResult").innerHTML =
+                accessoriesAmount.toFixed(2);
+
+            document.getElementById("emergencyResult").innerHTML =
+                emergencyAmount.toFixed(2);
+
+            document.getElementById("remainingResult").innerHTML =
+                remainingAmount.toFixed(2);
+        }
+
+    </script>
+
+</body>
+</html>
