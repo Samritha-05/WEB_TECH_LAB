@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        h2 {
+            color: blue;
+            text-decoration: underline;
+        }
+        table {
+            border-spacing: 12px;
+        }
+        td {
+            padding: 4px;
+        }
+        .label {
+            color: blue;
+            font-weight: bold;
+            text-align: left;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <form action="/server" method="POST">
+        <table>
+            <tr>
+                <td class="label">Name<span class="required">*</span></td>
+                <td><input type="text" name="name" required placeholder="John David"></td>
+            </tr>
+            <tr>
+                <td class="label">Password<span class="required">*</span></td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td class="label">Age<span class="required">*</span></td>
+                <td><input type="number" name="age" required></td>
+            </tr>
+            <tr>
+                <td class="label">Mobile Number<span class="required">*</span></td>
+                <td><input type="tel" name="mobile" required pattern="[0-9]{10}"></td>
+            </tr>
+            <tr>
+                <td class="label">Email<span class="required">*</span></td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td class="label">Gender<span class="required">*</span></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male" style="color: blue;">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female" style="color: blue;">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">State<span class="required">*</span></td>
+                <td>
+                    <select name="state" required>
+                        <option value="">--Select State--</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Skills<span class="required">*</span></td>
+                <td style="color: blue;">
+                    <input type="checkbox" name="skills" value="Java Script"> Java Script
+                    <input type="checkbox" name="skills" value="Python"> Python
+                    <input type="checkbox" name="skills" value="C++"> C++
+                    <input type="checkbox" name="skills" value="Java"> Java
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; padding-top: 15px;">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
